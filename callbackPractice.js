@@ -9,7 +9,7 @@ Below is a sample problem
 
 and what you should write is the sayHi function that makes the code above work,
 
-   var sayHi = function(str, cb){
+    function(str, cb){
     cb(str);
    }
 
@@ -24,7 +24,7 @@ and what you should write is the sayHi function that makes the code above work,
 
   // Code Here
   function first(array, cb){
-      cb(array[0])
+      return cb(array[0])
 
     }
 
@@ -40,7 +40,7 @@ first(names, function(firstName){
 // 2. Write a function called last which returns the last item of the array using a callback function.
 
   //Code Here
-  function first(array, cb){
+  function last(array, cb){
     cb(array[array.length-1])
 
   }
@@ -108,8 +108,8 @@ uniq(names, function(uniqArr){
     //Code Here
     function each(nm,cb){
 
-      nm.map(function(q){
-         cb(q,nm.indexOf(x))
+      nm.map(function(q, idx){
+         cb(q,idx)
 
       })
     }
@@ -131,7 +131,7 @@ each(names, function(item, indice){
     cb(mk)
 
   })
-  
+
 }
 
 var users = [
